@@ -1,0 +1,19 @@
+<div class="alert alert-dismissable alert-danger">
+    <?php
+    if(isset($errors['title'])) {
+        ?>
+        <h4><?php echo $errors['title']; ?></h4>
+        <?php
+        unset($errors['title']);
+    }
+    ?>
+    <ul>
+        <?php
+        foreach($errors as $error) {
+            ?>
+            <li><?php echo $error; ?></li>
+            <?php
+        }
+        ?>
+    </ul>
+</div>

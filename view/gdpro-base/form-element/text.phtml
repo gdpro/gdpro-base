@@ -1,0 +1,17 @@
+<?php
+$col = 8;
+
+if(!isset($size)) $size = null;
+if($size == 'tiny') $col = 2;
+if($size == 'small') $col = 4;
+?>
+
+<div class="form-group">
+    <label class="col-md-4 control-label" for="<?php echo $element->getName(); ?>">
+        <?php echo $element->getLabel(); ?>
+    </label>
+    <div class="col-md-<?php echo $col; ?>">
+        <?php echo $this->formElement($element); ?>
+    </div>
+    <?php echo $this->formElementErrors($element); ?>
+</div>
