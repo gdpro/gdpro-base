@@ -3,7 +3,7 @@ namespace GdproBase;
 
 /**
  * Class Module
- * @package GdproBaseUi
+ * @package GdproBase
  */
 class Module
 {
