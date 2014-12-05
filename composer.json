@@ -1,5 +1,6 @@
 {
     "name": "gdpro/gdpro-base",
+    "description": "Gdpro Base module to use as based for gdpro module",
     "authors":[
         {
             "name":"Gary Gitton",
@@ -8,7 +9,8 @@
         }
     ],
     "require": {
-        "php": ">=5.5.8"
+        "php": ">=5.5.8",
+        "zendframework/zendframework": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.3"
