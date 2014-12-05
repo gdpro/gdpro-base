@@ -13,6 +13,8 @@ if($size == 'small') $col = 4;
     <div class="controls col-md-<?php echo $col; ?>">
         <?php echo $this->formElement($element); ?>
     </div>
-    <?php echo $this->formElementErrors($element); ?>
+    <div class="col-md-offset-4 col-md-<?php echo $col; ?>">
+        <?php echo $this->formElementErrors($element); ?>
+    </div>
 </div>
 
