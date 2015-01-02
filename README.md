@@ -46,3 +46,9 @@ return array(
     /* ... */
 );
 ```
+
+
+### Configuration
+
+#### Controller Layout Resolver
+
