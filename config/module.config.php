@@ -9,6 +9,7 @@ return [
         ],
         'invokables' => [
             'view_model' => 'Zend\View\Model\ViewModel',
+            'zend.hydrator.class_methods' => 'Zend\Stdlib\Hydrator\ClassMethods'
         ],
         'factories' => [
             'gdpro_base.listener.controller_layout_resolver' => 'GdproBase\Factory\Listener\ControllerLayoutResolverListenerFactory',
