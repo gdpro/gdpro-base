@@ -1,9 +1,14 @@
 <!-- Checkbox input-->
 <div class="form-group">
-    <div class="col-md-offset-4 col-md-8">
-        <?php echo $this->formCheckbox($element); ?>
+    <div class="row">
+        <div class="col-md-offset-4 col-md-8">
+            <?php echo $this->formCheckbox($element); ?>
+        </div>
     </div>
-    <div class="col-md-offset-4 col-md-8">
-        <?php echo $this->formElementErrors($element); ?>
+
+    <div class="row">
+        <div class="col-md-offset-4">
+            <?php echo $this->formElementErrors($element); ?>
+        </div>
     </div>
 </div>

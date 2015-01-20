@@ -7,29 +7,35 @@ if($size == 'small') $col = 4;
 ?>
 
 <div class="form-group">
-    <label class="col-md-4 control-label" for="<?php echo $element['day']->getName(); ?>">
-        <?php echo $element['day']->getLabel(); ?>
-    </label>
-    <div class="col-md-<?php echo $col; ?>">
-        <div class="row">
-            <div class="col-md-4 col-sm-4">
-                <?php echo $this->formElement($element['day']); ?>
-            </div>
+    <div class="row">
+        <label class="col-md-4 control-label" for="<?php echo $element['day']->getName(); ?>">
+            <?php echo $element['day']->getLabel(); ?>
+        </label>
 
-            <div class="col-md-4 col-sm-4">
-                <?php echo $this->formElement($element['month']); ?>
-            </div>
+        <div class="col-md-<?php echo $col; ?>">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <?php echo $this->formElement($element['day']); ?>
+                </div>
 
-            <div class="col-md-4 col-sm-4">
-                <?php echo $this->formElement($element['year']); ?>
+                <div class="col-md-4 col-sm-4">
+                    <?php echo $this->formElement($element['month']); ?>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <?php echo $this->formElement($element['year']); ?>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-md-offset-4 col-md-<?php echo $col; ?>">
-        <?php
-        echo $this->formElementErrors($element['day']);
-        echo $this->formElementErrors($element['month']);
-        echo $this->formElementErrors($element['year']);
-        ?>
+
+    <div class="row">
+        <div class="col-md-offset-4">
+            <?php
+            echo $this->formElementErrors($element['day']);
+            echo $this->formElementErrors($element['month']);
+            echo $this->formElementErrors($element['year']);
+            ?>
+        </div>
     </div>
 </div>

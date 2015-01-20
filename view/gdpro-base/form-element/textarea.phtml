@@ -7,14 +7,20 @@ if($size == 'small') $col = 4;
 ?>
 
 <div class="form-group">
-    <label class="col-md-4 control-label" for="<?php echo $element->getName(); ?>">
-        <?php echo $element->getLabel(); ?>
-    </label>
-    <div class="controls col-md-<?php echo $col; ?>">
-        <?php echo $this->formElement($element); ?>
+    <div class="row">
+        <label class="col-md-4 control-label" for="<?php echo $element->getName(); ?>">
+            <?php echo $element->getLabel(); ?>
+        </label>
+
+        <div class="controls col-md-<?php echo $col; ?>">
+            <?php echo $this->formElement($element); ?>
+        </div>
     </div>
-    <div class="col-md-offset-4 col-md-<?php echo $col; ?>">
-        <?php echo $this->formElementErrors($element); ?>
+
+    <div class="row">
+        <div class="col-md-offset-4">
+            <?php echo $this->formElementErrors($element); ?>
+        </div>
     </div>
 </div>
 
