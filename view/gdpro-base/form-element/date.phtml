@@ -4,6 +4,9 @@ $col = 8;
 if(!isset($size)) $size = null;
 if($size == 'tiny') $col = 2;
 if($size == 'small') $col = 4;
+if($size == 'medium') $col = 6;
+if($size == 'large') $col = 8;
+
 ?>
 
 <div class="form-group">
@@ -38,4 +41,16 @@ if($size == 'small') $col = 4;
             ?>
         </div>
     </div>
+
+    <?php
+    if(isset($helptext)) {
+        ?>
+        <div class="row">
+            <div class="col-md-offset-4 col-md-<?php echo $col; ?>">
+                <span class="help-block"><?php echo $helptext; ?></span>
+            </div>
+        </div>
+    <?php
+    }
+    ?>
 </div>
