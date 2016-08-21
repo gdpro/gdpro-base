@@ -1,6 +1,8 @@
 <?php
+
 namespace GdproBase;
 
+use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 
 /**
@@ -14,11 +16,14 @@ class Module
      */
     public function onBootstrap(MvcEvent $e)
     {
-        $events = $e->getApplication()->getEventManager();
-        $services = $e->getApplication()->getServiceManager();
+        $eventManager   = $e->getApplication()->getEventManager();
+        $serviceManager = $e->getApplication()->getServiceManager();
 
-        $events->attachAggregate(
-            $services->get('gdpro_base.listener.controller_layout_resolver')
+        $moduleRouteListener = new ModuleRouteListener();
+        $moduleRouteListener->attach($eventManager);
+
+        $eventManager->attachAggregate(
+            $serviceManager->get('gdpro_base.listener.controller_layout_resolver')
         );
     }
 
